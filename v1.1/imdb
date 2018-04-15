@@ -79,8 +79,8 @@ for l in List:
 		# print story.text
 		print(formatItem("Storyline: ", story.text.split("               ")[0].encode('utf-8')))
 
-		# print formatItem("Written By", story.text.split("               ")[1].split("Written by")[1].lstrip().encode('utf-8'))
-		print formatItem("","Written By: "+ story.text.split("               ")[1].split("Written by")[1].lstrip().encode('utf-8') )
+		if len(story.text.split("               "))>1:
+			print formatItem("","Written By: "+ story.text.split("               ")[1].split("Written by")[1].lstrip().encode('utf-8') )
 
 
 	print "############################################################"
